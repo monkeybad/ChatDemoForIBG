@@ -23,3 +23,7 @@ OTRSecrets.m
 *.lock
 
 Podfile.lock
+
+ChatNodeServer/http_server/public/uploads/*
+
+ChatNodeServer/http_server/public/tmp/*

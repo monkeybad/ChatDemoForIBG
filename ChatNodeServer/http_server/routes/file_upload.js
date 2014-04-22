@@ -44,7 +44,7 @@ exports.upload = function(req, res){
 
             var urls = [];
 
-            res.writeHead(200,{'Content-Type':'text/html'});//值得注意的是这里的response.writeHead()函数内容要写在form.parse()的callback中要不不会显示
+            res.writeHead(200,{'Content-Type':'text/json'});//值得注意的是这里的response.writeHead()函数内容要写在form.parse()的callback中要不不会显示
 
 
             for(var key in files)
@@ -70,7 +70,7 @@ exports.upload = function(req, res){
                 //os.rm(file.path);
             }
 
-            res.write(urls.toString());
+            res.write("{\"urls\":\""+urls.toString()+"\"}");
 
             res.end();
 

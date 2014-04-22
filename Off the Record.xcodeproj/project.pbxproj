@@ -474,6 +474,9 @@
 		F3261E5418F9547600103A83 /* GroupTalkListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3261E5218F9547600103A83 /* GroupTalkListViewController.xib */; };
 		F3261E6118FB869000103A83 /* GroupTalkChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3261E6018FB869000103A83 /* GroupTalkChatViewController.m */; };
 		F3261E6318FB97C200103A83 /* GroupTalkChatViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3261E6218FB97C200103A83 /* GroupTalkChatViewController.xib */; };
+		F32939031906B00100A4BBA9 /* CommonUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = F32939021906B00100A4BBA9 /* CommonUtils.m */; };
+		F32939041906B00100A4BBA9 /* CommonUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = F32939021906B00100A4BBA9 /* CommonUtils.m */; };
+		F32939051906B00100A4BBA9 /* CommonUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = F32939021906B00100A4BBA9 /* CommonUtils.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1427,6 +1430,8 @@
 		F3261E5F18FB869000103A83 /* GroupTalkChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupTalkChatViewController.h; sourceTree = "<group>"; };
 		F3261E6018FB869000103A83 /* GroupTalkChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupTalkChatViewController.m; sourceTree = "<group>"; };
 		F3261E6218FB97C200103A83 /* GroupTalkChatViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = GroupTalkChatViewController.xib; path = ../GroupTalkChatViewController.xib; sourceTree = "<group>"; };
+		F32939011906B00100A4BBA9 /* CommonUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonUtils.h; sourceTree = "<group>"; };
+		F32939021906B00100A4BBA9 /* CommonUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonUtils.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -2999,6 +3004,8 @@
 				F3261E5F18FB869000103A83 /* GroupTalkChatViewController.h */,
 				F3261E6018FB869000103A83 /* GroupTalkChatViewController.m */,
 				F3261E6218FB97C200103A83 /* GroupTalkChatViewController.xib */,
+				F32939011906B00100A4BBA9 /* CommonUtils.h */,
+				F32939021906B00100A4BBA9 /* CommonUtils.m */,
 			);
 			path = "Off the Record";
 			sourceTree = "<group>";
@@ -3497,6 +3504,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				63D2BB1918568C6700FFE4B7 /* test_OTRErrorManager.m in Sources */,
+				F32939041906B00100A4BBA9 /* CommonUtils.m in Sources */,
 				633FA548183F0D8C0064497C /* test_OTRManagedAccount.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -3505,6 +3513,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F32939051906B00100A4BBA9 /* CommonUtils.m in Sources */,
 				63C0856C184574BE00B9C984 /* Off_the_Record_Integration_Tests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -3622,6 +3631,7 @@
 				D9CEEE9D168423CA00B236B5 /* FTCreateRootGroup.m in Sources */,
 				D9CEEE9E168423CA00B236B5 /* FTDelDeny.m in Sources */,
 				D9CEEE9F168423CA00B236B5 /* FTDelPermit.m in Sources */,
+				F32939031906B00100A4BBA9 /* CommonUtils.m in Sources */,
 				D9CEEEA0168423CA00B236B5 /* FTRemoveBuddy.m in Sources */,
 				D9CEEEA1168423CA00B236B5 /* FTRemoveGroup.m in Sources */,
 				63D0E48D1819DEF1003ACA13 /* OTRvCard.m in Sources */,

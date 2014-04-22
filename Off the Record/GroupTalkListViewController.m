@@ -12,6 +12,7 @@
 #import "OTRProtocolManager.h"
 #import "MBProgressHUD.h"
 #import "GroupTalkChatViewController.h"
+#import "CommonUtils.h"
 
 typedef enum tagEnumInputViewType {
     kInputViewTypeJoin = 0,
@@ -101,6 +102,17 @@ typedef enum tagEnumInputViewType {
 
 - (IBAction)onPressedCreate:(id)sender
 {
+    [CommonUtils uploadImage:[UIImage imageNamed:@"chatsecure_icon"] withURL:@"http://127.0.0.1:8080/upload" andCallback:^(BOOL isSucceed, id responseObj) {
+        if (isSucceed)
+        {
+            NSLog(@"Image File Submit Succeed");
+        }
+        else
+        {
+            NSLog(@"Image File Submit Failed");
+        }
+        
+    }];
     _inputType = kInputViewTypeCreate;
     self.inputView.hidden = NO;
     self.inputView.alpha = 0.0f;
