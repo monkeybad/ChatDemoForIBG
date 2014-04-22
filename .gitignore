@@ -21,3 +21,5 @@ OTRSecrets.m
 *.lock
 
 *.lock
+
+Podfile.lock
