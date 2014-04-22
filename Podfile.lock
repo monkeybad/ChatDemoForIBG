@@ -83,9 +83,9 @@ SPEC CHECKSUMS:
   HPGrowingTextView: 4318f557b33c19def1c53ec275d6e2a2d6589cd0
   MagicalRecord: 95d49d74ef752cd52f6ad87bcb474817fc3978cf
   MBProgressHUD: 2bbc6f470111daf7f3eaa4eb12b8cbf01c4c0622
-  SBJson: abc2bf2baef456d5dae213f9826fe2b6fdf19861
+  SBJson: 0eeb4062451ec5ed792ff8b6615daff2ae39e218
   SIAlertView: 522351a8870be07fb49053fa054c83da3ea17dbe
   SSKeychain: d18926838c2e7cd342e2a49e9f869858e49f035a
   UIAlertView-Blocks: f7be28a08e85ec21143951ec6797ca6474faf563
 
-COCOAPODS: 0.31.1
+COCOAPODS: 0.32.1
