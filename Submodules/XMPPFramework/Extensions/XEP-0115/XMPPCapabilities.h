@@ -33,7 +33,7 @@
 	BOOL autoFetchHashedCapabilities;
 	BOOL autoFetchNonHashedCapabilities;
 	BOOL autoFetchMyServerCapabilities;
-	
+    
 	NSTimeInterval capabilitiesRequestTimeout;
 	
 	NSMutableSet *timers;
@@ -96,6 +96,7 @@
 **/
 
 @property (assign) BOOL autoFetchMyServerCapabilities;
+
 
 /**
  * Manually fetch the capabilities for the given jid.

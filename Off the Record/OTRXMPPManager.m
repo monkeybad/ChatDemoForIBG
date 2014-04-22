@@ -36,6 +36,7 @@
 #import "Strings.h"
 #import "OTRXMPPManagedPresenceSubscriptionRequest.h"
 #import "OTRRosterStorage.h"
+#import "OTRChatRoomsStorage.h"
 #import "OTRCapabilitiesInMemoryCoreDataStorage.h"
 #import "OTRvCardCoreDataStorage.h"
 
@@ -63,6 +64,7 @@
 @property (nonatomic, strong) XMPPvCardCoreDataStorage *xmppvCardStorage;
 @property (nonatomic, strong) XMPPvCardTempModule *xmppvCardTempModule;
 @property (nonatomic, strong) XMPPvCardAvatarModule *xmppvCardAvatarModule;
+@property (nonatomic, strong) XMPPServiceDiscover* serviceDiscoverModule;
 @property (nonatomic, strong) XMPPCapabilities *xmppCapabilities;
 @property (nonatomic, strong) NSString *password;
 @property (nonatomic, strong) XMPPJID *JID;
@@ -221,6 +223,9 @@
 	
 	self.xmppvCardAvatarModule = [[XMPPvCardAvatarModule alloc] initWithvCardTempModule:self.xmppvCardTempModule];
 	
+    OTRChatRoomsStorage* chatRoomStorage = [[OTRChatRoomsStorage alloc] init];
+    self.serviceDiscoverModule = [[XMPPServiceDiscover alloc] initWithChatRoomStorage:chatRoomStorage];
+    
 	// Setup capabilities
 	// 
 	// The XMPPCapabilities module handles all the complex hashing of the caps protocol (XEP-0115).
@@ -245,7 +250,8 @@
     
     self.xmppCapabilities.autoFetchHashedCapabilities = YES;
     self.xmppCapabilities.autoFetchNonHashedCapabilities = NO;
-    
+    self.xmppCapabilities.autoFetchMyServerCapabilities = YES;
+    self.serviceDiscoverModule.autoFetchMyServerConference = YES;
     
 	// Activate xmpp modules
     
@@ -254,11 +260,13 @@
 	[self.xmppvCardTempModule   activate:self.xmppStream];
 	[self.xmppvCardAvatarModule activate:self.xmppStream];
 	[self.xmppCapabilities      activate:self.xmppStream];
+    [self.serviceDiscoverModule activate:self.xmppStream];
     
 	// Add ourself as a delegate to anything we may be interested in
     
 	[self.xmppStream addDelegate:self delegateQueue:dispatch_get_main_queue()];
 	[self.xmppRoster addDelegate:self delegateQueue:dispatch_get_main_queue()];
+    [self.serviceDiscoverModule addDelegate:self delegateQueue:dispatch_get_main_queue()];
     [self.xmppCapabilities addDelegate:self delegateQueue:dispatch_get_main_queue()];
     
 	// Optional:
@@ -286,6 +294,7 @@
     [_xmppvCardTempModule   deactivate];
     [_xmppvCardAvatarModule deactivate];
     [_xmppCapabilities      deactivate];
+    [_serviceDiscoverModule deactivate];
 
     [_xmppStream disconnect];
 
@@ -299,6 +308,7 @@
     _xmppCapabilities = nil;
     _xmppCapabilitiesStorage = nil;
     _certificatePinningModule = nil;
+    _serviceDiscoverModule = nil;
 }
 
 // It's easy to create XML elments to send and to read received XML elements.

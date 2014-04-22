@@ -11,3 +11,13 @@ OTRSecrets.m
 
 
 /Pods/
+
+*.xccheckout
+
+*.xccheckout
+
+*.xccheckout
+
+*.lock
+
+*.lock

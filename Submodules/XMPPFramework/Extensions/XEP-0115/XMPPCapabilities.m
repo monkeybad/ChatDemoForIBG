@@ -82,7 +82,6 @@
 @dynamic autoFetchHashedCapabilities;
 @dynamic autoFetchNonHashedCapabilities;
 @dynamic autoFetchMyServerCapabilities;
-
 - (id)init
 {
 	// This will cause a crash - it's designed to.
@@ -1546,39 +1545,40 @@ static NSInteger sortFieldValues(NSXMLElement *value1, NSXMLElement *value2, voi
 	// </iq>
 	
 	NSXMLElement *query = [iq elementForName:@"query" xmlns:XMLNS_DISCO_INFO];
-	if (query == nil)
+	if (query != nil)
 	{
-		return NO;
+        NSString *type = [[iq attributeStringValueForName:@"type"] lowercaseString];
+        if ([type isEqualToString:@"get"])
+        {
+            NSString *node = [query attributeStringValueForName:@"node"];
+            
+            if (node == nil || [node hasPrefix:myCapabilitiesNode])
+            {
+                [self handleDiscoRequest:iq];
+            }
+            else
+            {
+                return NO;
+            }
+        }
+        else if ([type isEqualToString:@"result"])
+        {
+            [self handleDiscoResponse:query fromJID:[iq from]];
+        }
+        else if ([type isEqualToString:@"error"])
+        {
+            [self handleDiscoErrorResponse:query fromJID:[iq from]];
+        }
+        else
+        {
+            return NO;
+        }
+        
+        return YES;
 	}
-	
-	NSString *type = [[iq attributeStringValueForName:@"type"] lowercaseString];
-	if ([type isEqualToString:@"get"])
-	{
-		NSString *node = [query attributeStringValueForName:@"node"];
-		
-		if (node == nil || [node hasPrefix:myCapabilitiesNode])
-		{
-			[self handleDiscoRequest:iq];
-		}
-		else
-		{
-			return NO;
-		}
-	}
-	else if ([type isEqualToString:@"result"])
-	{
-		[self handleDiscoResponse:query fromJID:[iq from]];
-	}
-	else if ([type isEqualToString:@"error"])
-	{
-		[self handleDiscoErrorResponse:query fromJID:[iq from]];
-	}
-	else
-	{
-		return NO;
-	}
-	
-	return YES;
+
+	return NO;
+
 }
 
 - (XMPPPresence *)xmppStream:(XMPPStream *)sender willSendPresence:(XMPPPresence *)presence

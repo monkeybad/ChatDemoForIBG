@@ -3955,7 +3955,9 @@ enum XMPPStreamConfig
 	lastSendReceiveTime = [NSDate timeIntervalSinceReferenceDate];
 	numberOfBytesReceived += [data length];
 	
-	XMPPLogRecvPre(@"RECV: %@", [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
+    NSString* strData = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+    
+	XMPPLogRecvPre(@"RECV: %@", strData);
 	
 	// Asynchronously parse the xml data
 	[parser parseData:data];

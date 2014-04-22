@@ -38,6 +38,7 @@
 #import "OTRManagedBuddy.h"
 #import "OTRXMPPBudyTimers.h"
 #import "OTRCertificatePinning.h"
+#import "XMPPServiceDiscover.h"
 
 @class OTRRosterStorage;
 
@@ -47,6 +48,7 @@
 @property (nonatomic, readonly) XMPPReconnect *xmppReconnect;
 @property (nonatomic, readonly) XMPPRoster *xmppRoster;
 @property (nonatomic, readonly) OTRRosterStorage *xmppRosterStorage;
+@property (nonatomic, readonly) XMPPServiceDiscover* serviceDiscoverModule;
 @property (nonatomic, readonly) XMPPvCardTempModule *xmppvCardTempModule;
 @property (nonatomic, readonly) XMPPvCardAvatarModule *xmppvCardAvatarModule;
 @property (nonatomic, readonly) XMPPCapabilities *xmppCapabilities;

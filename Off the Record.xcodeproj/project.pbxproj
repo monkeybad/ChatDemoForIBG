@@ -22,6 +22,8 @@
 
 /* Begin PBXBuildFile section */
 		1A86AD5E18C3EF39001110D7 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 1A86AD5D18C3EF39001110D7 /* Podfile */; };
+		4FE49E431906944B00395AA8 /* XMPPServiceDiscover.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FE49E421906944B00395AA8 /* XMPPServiceDiscover.m */; };
+		4FE49E471906949600395AA8 /* OTRChatRoomsStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FE49E461906949600395AA8 /* OTRChatRoomsStorage.m */; };
 		6300F15A16E6C30200D3C1AA /* OTRXMPPManagedPresenceSubscriptionRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6321870B16E6C23200CB4D3C /* OTRXMPPManagedPresenceSubscriptionRequest.m */; };
 		6300F15C16E6C30800D3C1AA /* _OTRXMPPManagedPresenceSubscriptionRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6321870916E6C21100CB4D3C /* _OTRXMPPManagedPresenceSubscriptionRequest.m */; };
 		6300F16316E6CCD400D3C1AA /* inbox.png in Resources */ = {isa = PBXBuildFile; fileRef = 6300F16116E6CCD400D3C1AA /* inbox.png */; };
@@ -540,6 +542,10 @@
 		1AE5185918C3B45900946594 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = en; path = OTR_Codesigning.xcconfig; sourceTree = "<group>"; };
 		1AE5186518C3B53C00946594 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = en; path = OTR_Release.xcconfig; sourceTree = "<group>"; };
 		1AE5189718C3CA1000946594 /* OTR_Codesigning.xcconfig.sample */ = {isa = PBXFileReference; lastKnownFileType = text; path = OTR_Codesigning.xcconfig.sample; sourceTree = "<group>"; };
+		4FE49E411906944B00395AA8 /* XMPPServiceDiscover.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMPPServiceDiscover.h; sourceTree = "<group>"; };
+		4FE49E421906944B00395AA8 /* XMPPServiceDiscover.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMPPServiceDiscover.m; sourceTree = "<group>"; };
+		4FE49E451906949600395AA8 /* OTRChatRoomsStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTRChatRoomsStorage.h; sourceTree = "<group>"; };
+		4FE49E461906949600395AA8 /* OTRChatRoomsStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTRChatRoomsStorage.m; sourceTree = "<group>"; };
 		6300F16116E6CCD400D3C1AA /* inbox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = inbox.png; sourceTree = "<group>"; };
 		6300F16216E6CCD400D3C1AA /* inbox@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "inbox@2x.png"; sourceTree = "<group>"; };
 		6300F16516E6CF8400D3C1AA /* OTRSubscriptionRequestsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTRSubscriptionRequestsViewController.h; sourceTree = "<group>"; };
@@ -1490,6 +1496,15 @@
 			path = "Off the Record/configurations";
 			sourceTree = SOURCE_ROOT;
 		};
+		4FE49E401906944B00395AA8 /* XEP-0030 */ = {
+			isa = PBXGroup;
+			children = (
+				4FE49E411906944B00395AA8 /* XMPPServiceDiscover.h */,
+				4FE49E421906944B00395AA8 /* XMPPServiceDiscover.m */,
+			);
+			path = "XEP-0030";
+			sourceTree = "<group>";
+		};
 		6301D87F16E95A23008F67A6 /* OpenInChrome */ = {
 			isa = PBXGroup;
 			children = (
@@ -1531,6 +1546,8 @@
 		634671631818710C00515463 /* XMPP - Storage */ = {
 			isa = PBXGroup;
 			children = (
+				4FE49E451906949600395AA8 /* OTRChatRoomsStorage.h */,
+				4FE49E461906949600395AA8 /* OTRChatRoomsStorage.m */,
 				6375D2511811FCD2006CDA8A /* OTRRosterStorage.h */,
 				6375D2521811FCD2006CDA8A /* OTRRosterStorage.m */,
 				63D0E4771819D41E003ACA13 /* OTRCapabilitiesInMemoryCoreDataStorage.h */,
@@ -1703,6 +1720,7 @@
 				63483E501752CED100779257 /* XEP-0009 */,
 				63483E571752CED100779257 /* XEP-0012 */,
 				63483E5C1752CED100779257 /* XEP-0016 */,
+				4FE49E401906944B00395AA8 /* XEP-0030 */,
 				63483E5F1752CED100779257 /* XEP-0045 */,
 				63483E831752CED100779257 /* XEP-0054 */,
 				63483E9F1752CED100779257 /* XEP-0059 */,
@@ -3505,6 +3523,7 @@
 				D999075D14142CC400D573EE /* OTRProtocolManager.m in Sources */,
 				D92B775514142F150058A789 /* OTREncryptionManager.m in Sources */,
 				D9D69B061418069F0056FB9E /* OTRXMPPManager.m in Sources */,
+				4FE49E471906949600395AA8 /* OTRChatRoomsStorage.m in Sources */,
 				D9BBCD3F1491F8B400AF1B9F /* OTRAboutViewController.m in Sources */,
 				D90FAF2914A0624B00DA7C56 /* OTRBuddyList.m in Sources */,
 				D9C7463D15350F62003445ED /* OTRSettingsViewController.m in Sources */,
@@ -3774,6 +3793,7 @@
 				63483FD31752CED100779257 /* XMPPMessageArchiving_Message_CoreDataObject.m in Sources */,
 				63483FD41752CED100779257 /* XMPPMessageArchivingCoreDataStorage.m in Sources */,
 				63483FD51752CED100779257 /* XMPPMessageArchiving.m in Sources */,
+				4FE49E431906944B00395AA8 /* XMPPServiceDiscover.m in Sources */,
 				63483FD61752CED100779257 /* XMPPvCardAvatarModule.m in Sources */,
 				63483FD71752CED100779257 /* XMPPMessage+XEP_0172.m in Sources */,
 				63483FD81752CED100779257 /* XMPPPresence+XEP_0172.m in Sources */,
