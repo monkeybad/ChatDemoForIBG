@@ -477,6 +477,24 @@
 		F32939031906B00100A4BBA9 /* CommonUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = F32939021906B00100A4BBA9 /* CommonUtils.m */; };
 		F32939041906B00100A4BBA9 /* CommonUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = F32939021906B00100A4BBA9 /* CommonUtils.m */; };
 		F32939051906B00100A4BBA9 /* CommonUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = F32939021906B00100A4BBA9 /* CommonUtils.m */; };
+		F329390B19075DBE00A4BBA9 /* GroupTalkChatHtmlViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F329390919075DBE00A4BBA9 /* GroupTalkChatHtmlViewController.m */; };
+		F329390C19075DBE00A4BBA9 /* GroupTalkChatHtmlViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F329390919075DBE00A4BBA9 /* GroupTalkChatHtmlViewController.m */; };
+		F329390D19075DBE00A4BBA9 /* GroupTalkChatHtmlViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F329390919075DBE00A4BBA9 /* GroupTalkChatHtmlViewController.m */; };
+		F329390E19075DBE00A4BBA9 /* GroupTalkChatHtmlViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F329390A19075DBE00A4BBA9 /* GroupTalkChatHtmlViewController.xib */; };
+		F329390F19075DBE00A4BBA9 /* GroupTalkChatHtmlViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F329390A19075DBE00A4BBA9 /* GroupTalkChatHtmlViewController.xib */; };
+		F329391019075DBE00A4BBA9 /* GroupTalkChatHtmlViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F329390A19075DBE00A4BBA9 /* GroupTalkChatHtmlViewController.xib */; };
+		F329391919075DF600A4BBA9 /* GroupTalkChatHtmlInputBoxViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F329391719075DF600A4BBA9 /* GroupTalkChatHtmlInputBoxViewController.m */; };
+		F329391A19075DF600A4BBA9 /* GroupTalkChatHtmlInputBoxViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F329391719075DF600A4BBA9 /* GroupTalkChatHtmlInputBoxViewController.m */; };
+		F329391B19075DF600A4BBA9 /* GroupTalkChatHtmlInputBoxViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F329391719075DF600A4BBA9 /* GroupTalkChatHtmlInputBoxViewController.m */; };
+		F329391C19075DF600A4BBA9 /* GroupTalkChatHtmlInputBoxViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F329391819075DF600A4BBA9 /* GroupTalkChatHtmlInputBoxViewController.xib */; };
+		F329391D19075DF600A4BBA9 /* GroupTalkChatHtmlInputBoxViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F329391819075DF600A4BBA9 /* GroupTalkChatHtmlInputBoxViewController.xib */; };
+		F329391E19075DF600A4BBA9 /* GroupTalkChatHtmlInputBoxViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F329391819075DF600A4BBA9 /* GroupTalkChatHtmlInputBoxViewController.xib */; };
+		F329392219075E7200A4BBA9 /* GroupTalkChatHtmlBubbleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F329392019075E7200A4BBA9 /* GroupTalkChatHtmlBubbleViewController.m */; };
+		F329392319075E7200A4BBA9 /* GroupTalkChatHtmlBubbleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F329392019075E7200A4BBA9 /* GroupTalkChatHtmlBubbleViewController.m */; };
+		F329392419075E7200A4BBA9 /* GroupTalkChatHtmlBubbleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F329392019075E7200A4BBA9 /* GroupTalkChatHtmlBubbleViewController.m */; };
+		F329392519075E7200A4BBA9 /* GroupTalkChatHtmlBubbleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F329392119075E7200A4BBA9 /* GroupTalkChatHtmlBubbleViewController.xib */; };
+		F329392619075E7200A4BBA9 /* GroupTalkChatHtmlBubbleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F329392119075E7200A4BBA9 /* GroupTalkChatHtmlBubbleViewController.xib */; };
+		F329392719075E7200A4BBA9 /* GroupTalkChatHtmlBubbleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F329392119075E7200A4BBA9 /* GroupTalkChatHtmlBubbleViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1432,6 +1450,15 @@
 		F3261E6218FB97C200103A83 /* GroupTalkChatViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = GroupTalkChatViewController.xib; path = ../GroupTalkChatViewController.xib; sourceTree = "<group>"; };
 		F32939011906B00100A4BBA9 /* CommonUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonUtils.h; sourceTree = "<group>"; };
 		F32939021906B00100A4BBA9 /* CommonUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonUtils.m; sourceTree = "<group>"; };
+		F329390819075DBE00A4BBA9 /* GroupTalkChatHtmlViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupTalkChatHtmlViewController.h; sourceTree = "<group>"; };
+		F329390919075DBE00A4BBA9 /* GroupTalkChatHtmlViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupTalkChatHtmlViewController.m; sourceTree = "<group>"; };
+		F329390A19075DBE00A4BBA9 /* GroupTalkChatHtmlViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GroupTalkChatHtmlViewController.xib; sourceTree = "<group>"; };
+		F329391619075DF600A4BBA9 /* GroupTalkChatHtmlInputBoxViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupTalkChatHtmlInputBoxViewController.h; sourceTree = "<group>"; };
+		F329391719075DF600A4BBA9 /* GroupTalkChatHtmlInputBoxViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupTalkChatHtmlInputBoxViewController.m; sourceTree = "<group>"; };
+		F329391819075DF600A4BBA9 /* GroupTalkChatHtmlInputBoxViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GroupTalkChatHtmlInputBoxViewController.xib; sourceTree = "<group>"; };
+		F329391F19075E7200A4BBA9 /* GroupTalkChatHtmlBubbleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupTalkChatHtmlBubbleViewController.h; sourceTree = "<group>"; };
+		F329392019075E7200A4BBA9 /* GroupTalkChatHtmlBubbleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupTalkChatHtmlBubbleViewController.m; sourceTree = "<group>"; };
+		F329392119075E7200A4BBA9 /* GroupTalkChatHtmlBubbleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GroupTalkChatHtmlBubbleViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -2941,6 +2968,7 @@
 		D9F9378013F44BD3009A3D84 /* Off the Record */ = {
 			isa = PBXGroup;
 			children = (
+				F3293907190759C800A4BBA9 /* GroupChat */,
 				D9ADF9E318109D410096B07A /* OTRDatabaseManager.h */,
 				D9ADF9E418109D410096B07A /* OTRDatabaseManager.m */,
 				D9D69B07141806BB0056FB9E /* Model */,
@@ -3125,6 +3153,22 @@
 			);
 			name = Images;
 			path = ..;
+			sourceTree = "<group>";
+		};
+		F3293907190759C800A4BBA9 /* GroupChat */ = {
+			isa = PBXGroup;
+			children = (
+				F329390819075DBE00A4BBA9 /* GroupTalkChatHtmlViewController.h */,
+				F329390919075DBE00A4BBA9 /* GroupTalkChatHtmlViewController.m */,
+				F329390A19075DBE00A4BBA9 /* GroupTalkChatHtmlViewController.xib */,
+				F329391619075DF600A4BBA9 /* GroupTalkChatHtmlInputBoxViewController.h */,
+				F329391719075DF600A4BBA9 /* GroupTalkChatHtmlInputBoxViewController.m */,
+				F329391819075DF600A4BBA9 /* GroupTalkChatHtmlInputBoxViewController.xib */,
+				F329391F19075E7200A4BBA9 /* GroupTalkChatHtmlBubbleViewController.h */,
+				F329392019075E7200A4BBA9 /* GroupTalkChatHtmlBubbleViewController.m */,
+				F329392119075E7200A4BBA9 /* GroupTalkChatHtmlBubbleViewController.xib */,
+			);
+			path = GroupChat;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -3320,6 +3364,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				6305864B183F02D4009ADB6B /* InfoPlist.strings in Resources */,
+				F329390F19075DBE00A4BBA9 /* GroupTalkChatHtmlViewController.xib in Resources */,
+				F329391D19075DF600A4BBA9 /* GroupTalkChatHtmlInputBoxViewController.xib in Resources */,
+				F329392619075E7200A4BBA9 /* GroupTalkChatHtmlBubbleViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3328,6 +3375,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				63C0856A184574BE00B9C984 /* InfoPlist.strings in Resources */,
+				F329391019075DBE00A4BBA9 /* GroupTalkChatHtmlViewController.xib in Resources */,
+				F329391E19075DF600A4BBA9 /* GroupTalkChatHtmlInputBoxViewController.xib in Resources */,
+				F329392719075E7200A4BBA9 /* GroupTalkChatHtmlBubbleViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3359,6 +3409,7 @@
 				D9BBCD431491FFC800AF1B9F /* about_icon.png in Resources */,
 				D968479E18C158EE008FDC46 /* uv_heart@2x.png in Resources */,
 				D9BBCD441491FFC800AF1B9F /* about_icon@2x.png in Resources */,
+				F329391C19075DF600A4BBA9 /* GroupTalkChatHtmlInputBoxViewController.xib in Resources */,
 				63B046E3185BD2780066C8E5 /* button-green.png in Resources */,
 				D99071B2151EB5C6002CECC9 /* 08-chat@2x.png in Resources */,
 				D99071B3151EB5C6002CECC9 /* 19-gear@2x.png in Resources */,
@@ -3372,6 +3423,7 @@
 				D9A7E0AD15242D9000EEDDB5 /* Default-Landscape@2x~ipad.png in Resources */,
 				D9D8D2061531056300F9E8D3 /* Localizable.strings in Resources */,
 				D9FC987015588F230039518D /* chatsecure_qrcode.png in Resources */,
+				F329390E19075DBE00A4BBA9 /* GroupTalkChatHtmlViewController.xib in Resources */,
 				D9FC987115588F230039518D /* chatsecure_qrcode@2x.png in Resources */,
 				6352DC9015AFB3D2007AD0B4 /* facebook.png in Resources */,
 				6352DC9115AFB3D2007AD0B4 /* facebook@2x.png in Resources */,
@@ -3412,6 +3464,7 @@
 				63E5E83B16D1DF14006E2B01 /* MessageInputBarBackground.png in Resources */,
 				63E5E83C16D1DF14006E2B01 /* MessageInputBarBackground@2x.png in Resources */,
 				63E5E83D16D1DF14006E2B01 /* MessageInputFieldBackground.png in Resources */,
+				F329392519075E7200A4BBA9 /* GroupTalkChatHtmlBubbleViewController.xib in Resources */,
 				63E5E83E16D1DF14006E2B01 /* MessageInputFieldBackground@2x.png in Resources */,
 				633B6D0117ECF4F7002DA152 /* googleTalkButtonPressed.png in Resources */,
 				D968479B18C158EE008FDC46 /* uv_article.png in Resources */,
@@ -3504,8 +3557,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				63D2BB1918568C6700FFE4B7 /* test_OTRErrorManager.m in Sources */,
+				F329391A19075DF600A4BBA9 /* GroupTalkChatHtmlInputBoxViewController.m in Sources */,
 				F32939041906B00100A4BBA9 /* CommonUtils.m in Sources */,
+				F329392319075E7200A4BBA9 /* GroupTalkChatHtmlBubbleViewController.m in Sources */,
 				633FA548183F0D8C0064497C /* test_OTRManagedAccount.m in Sources */,
+				F329390C19075DBE00A4BBA9 /* GroupTalkChatHtmlViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3513,8 +3569,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F329392419075E7200A4BBA9 /* GroupTalkChatHtmlBubbleViewController.m in Sources */,
 				F32939051906B00100A4BBA9 /* CommonUtils.m in Sources */,
 				63C0856C184574BE00B9C984 /* Off_the_Record_Integration_Tests.m in Sources */,
+				F329391B19075DF600A4BBA9 /* GroupTalkChatHtmlInputBoxViewController.m in Sources */,
+				F329390D19075DBE00A4BBA9 /* GroupTalkChatHtmlViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3616,6 +3675,7 @@
 				D9CEEE8E168423CA00B236B5 /* AIMStatusHandler.m in Sources */,
 				D9CEEE8F168423CA00B236B5 /* AIMTempBuddyHandler.m in Sources */,
 				D9CEEE90168423CA00B236B5 /* ANCGIHTTPParameterReader.m in Sources */,
+				F329391919075DF600A4BBA9 /* GroupTalkChatHtmlInputBoxViewController.m in Sources */,
 				D9CEEE91168423CA00B236B5 /* ANIPInformation.m in Sources */,
 				D9CEEE92168423CA00B236B5 /* ANStringEscaper.m in Sources */,
 				D9CEEE93168423CA00B236B5 /* BasicStrings.m in Sources */,
@@ -3656,6 +3716,7 @@
 				D9CEEEBD168423CA00B236B5 /* TLV.m in Sources */,
 				638286E01846911C00F127C2 /* OTRAccountTableViewCell.m in Sources */,
 				D9CEF0E916842AC700B236B5 /* GTMNSString+HTML.m in Sources */,
+				F329392219075E7200A4BBA9 /* GroupTalkChatHtmlBubbleViewController.m in Sources */,
 				D9CEF0EF16842AC700B236B5 /* NSString+HTML.m in Sources */,
 				D953118616C70DD200AAB1D2 /* OTRDonateSetting.m in Sources */,
 				63D2BB0D18568A3500FFE4B7 /* OTRErrorManager.m in Sources */,
@@ -3749,6 +3810,7 @@
 				63483FA11752CED100779257 /* XMPPIQ+JabberRPCResonse.m in Sources */,
 				63483FA21752CED100779257 /* XMPPJabberRPCModule.m in Sources */,
 				63483FA31752CED100779257 /* XMPPIQ+LastActivity.m in Sources */,
+				F329390B19075DBE00A4BBA9 /* GroupTalkChatHtmlViewController.m in Sources */,
 				63483FA41752CED100779257 /* XMPPLastActivity.m in Sources */,
 				63483FA51752CED100779257 /* XMPPPrivacy.m in Sources */,
 				63483FA61752CED100779257 /* XMPPRoom.xcdatamodeld in Sources */,

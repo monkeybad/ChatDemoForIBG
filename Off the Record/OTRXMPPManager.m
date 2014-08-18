@@ -80,6 +80,7 @@
 @property (nonatomic, strong) id roomJoinRoomBlk;
 @property (nonatomic, strong) NSMutableDictionary* roomDict;
 @property (nonatomic, strong) NSMutableDictionary* roomReceiveMsgBlkDict;
+@property (nonatomic, strong) NSMutableDictionary* roomReceiveMsgHtmlBlkDict;
 @property (nonatomic, strong) NSMutableDictionary* roomHasLeftDict;
 
 - (void)setupStream;
@@ -105,6 +106,7 @@
         self.roomHasLeftDict = [NSMutableDictionary dictionary];
         self.roomDict = [NSMutableDictionary dictionary];
         self.roomReceiveMsgBlkDict = [NSMutableDictionary dictionary];
+        self.roomReceiveMsgHtmlBlkDict = [NSMutableDictionary dictionary];
     }
     return self;
 }
@@ -931,6 +933,25 @@ managedBuddyObjectID
     self.roomDict[roomJID] = room;
 }
 
+- (void)enterRoomWithOnReceivedRoomMsgFor:(NSString*)roomJID htmlCallBack:(void (^)(NSString* roomMsg,NSString* roomHtmlMsg, NSString* memeberJID, NSString* memberNick))resultBlk
+{
+    if (resultBlk == nil)
+    {
+        [self.roomReceiveMsgHtmlBlkDict removeObjectForKey:roomJID];
+    }
+    else
+    {
+        [self.roomReceiveMsgHtmlBlkDict setObject:resultBlk forKey:roomJID];
+    }
+    
+    XMPPRoom* room = [[XMPPRoom alloc] initWithRoomStorage:self jid:[XMPPJID jidWithString:roomJID]];
+    [room activate:self.xmppStream];
+    [room addDelegate:self delegateQueue:dispatch_get_main_queue()];
+    self.roomHasLeftDict[roomJID] = @NO;
+    [room joinRoomUsingNickname:[self.JID user] history:nil];
+    self.roomDict[roomJID] = room;
+}
+
 - (void)leaveRoomFor:(NSString*)roomJID
 {
     XMPPRoom* room = self.roomDict[roomJID];
@@ -943,6 +964,7 @@ managedBuddyObjectID
     }
     
     [self.roomReceiveMsgBlkDict removeObjectForKey:roomJID];
+    [self.roomReceiveMsgHtmlBlkDict removeObjectForKey:roomJID];
     [self.roomDict removeObjectForKey:roomJID];
 }
 
@@ -1006,6 +1028,12 @@ managedBuddyObjectID
         
         [room sendMessage:xmppMessage];
     }
+}
+
+- (void)sendRoomMsgImage:(NSString*)imageUrl withRoomJID:(NSString*)roomJID
+{
+    NSString* htmlStr = [NSString stringWithFormat:@"<html xmlns=\"http://jabber.org/protocol/xhtml-im\">\n<body xmlns=\"http://www.w3.org/1999/xhtml\">\n<img src=\"%@\"></img>\n</body>\n</html>",imageUrl];
+    [self sendRoomMsg:imageUrl withHtml:htmlStr withRoomJID:roomJID];
 }
 
 
@@ -1119,14 +1147,26 @@ managedBuddyObjectID
     
     //if ([message isChatMessage])
     //{
-        NSString* roomJID = [[sender roomJID] bare];
-        void (^resultBlk)(NSString* roomMsg, NSString* memeberJID, NSString* memberNick) = self.roomReceiveMsgBlkDict[roomJID];
+    NSString* roomJID = [[sender roomJID] bare];
+    void (^resultBlk)(NSString* roomMsg, NSString* memeberJID, NSString* memberNick) = self.roomReceiveMsgBlkDict[roomJID];
+    void (^resultHtmlBlk)(NSString* roomMsg, NSString* roomHtmlMsg, NSString* memeberJID, NSString* memberNick) = self.roomReceiveMsgHtmlBlkDict[roomJID];
+    
     if (resultBlk)
     {
         NSString* memJID = [occupantJID full];
         NSString* memNick = [occupantJID resource];
         NSString* msg = [message body];
         resultBlk(msg,memJID,memNick);
+    }
+    
+    if (resultHtmlBlk)
+    {
+        NSString* memJID = [occupantJID full];
+        NSString* memNick = [occupantJID resource];
+        NSString* msg = [message body];
+        
+        NSString* html = [[message elementForName:@"html"] stringValue];
+        resultHtmlBlk(msg,html,memJID,memNick);
     }
     
     //}

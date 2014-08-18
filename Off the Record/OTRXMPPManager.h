@@ -75,12 +75,13 @@
 //For Rooms
 - (void)requestGroupList:(void (^)(BOOL isSucceed, NSDictionary* roomJIDKeyAndNameValueDict))resultBlk;
 - (void)enterRoomWithOnReceivedRoomMsgFor:(NSString*)roomJID callBack:(void (^)(NSString* roomMsg, NSString* memeberJID, NSString* memberNick))resultBlk;
+- (void)enterRoomWithOnReceivedRoomMsgFor:(NSString*)roomJID htmlCallBack:(void (^)(NSString* roomMsg,NSString* roomHtmlMsg, NSString* memeberJID, NSString* memberNick))resultBlk;
 - (void)leaveRoomFor:(NSString*)roomJID;
 - (void)createRoom:(NSString*)roomJID callback:(void (^)(BOOL isSucceed))resultBlk;
 - (void)joinRoom:(NSString*)roomJID callback:(void (^)(BOOL isSucceed))resultBlk;
 - (void)getMemberList:(NSString*)roomJID callback:(void (^)(BOOL isSucceed, NSDictionary* memberJIDKeysAndNickDict))resultBlk;
 - (void)sendRoomMsg:(NSString*)roomMsg withRoomJID:(NSString*)roomJID;
 - (void)sendRoomMsg:(NSString*)roomMsg withHtml:(NSString*)htmlString withRoomJID:(NSString*)roomJID;
-
+- (void)sendRoomMsgImage:(NSString*)imageUrl withRoomJID:(NSString*)roomJID;
 
 @end
