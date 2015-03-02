@@ -25,9 +25,9 @@
 			<key>metadata</key>
 			<dict>
 				<key>bundle-identifier</key>
-				<string>com.tencent.ibg.ipick.dailybuild</string>
+				<string>com.tencent.ibg.ipick.dailybuildNew</string>
 				<key>bundle-version</key>
-				<string>1.0.2</string>
+				<string>1.2.0</string>
 				<key>kind</key>
 				<string>software</string>
 				<key>title</key>
